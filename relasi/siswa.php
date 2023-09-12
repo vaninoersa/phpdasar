@@ -28,6 +28,7 @@
                     <th scope="col">Gender</th>
                     <th scope="col">Kelas</th>
                     <th scope="col">Nama sekolah</th>
+                    <th class="text-center">Aksi</th>
                 </tr>
             </thead>
   <tbody classs="table-grup-divider">
@@ -44,10 +45,15 @@
         <td><?= $row['gender']; ?></td>
         <td><?= $row['tingkat_kelas'].''.$row['jurusan_kelas']; ?></td>
         <td><?= $row['nama_sekolah']; ?></td>
+        <td class ="text-center">
+            <a href="<?='detail.php?id='.$row['id_siswa']; ?>" class = "btn btn-sm btn-primary">Detail</a>
+            <a href="<?='delet.php?id='.$row['id_siswa']; ?>" class = "btn btn-sm btn-danger">Delete</a>
+        </td>
    </tr>
         <?php endforeach; ?>
   </tbody>
 </table>
+<a href="create.php" class = "btn btn-sm btn-primary">Tambah</a>
 </div>
   </body>
 
